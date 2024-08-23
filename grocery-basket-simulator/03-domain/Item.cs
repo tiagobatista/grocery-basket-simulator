@@ -1,14 +1,9 @@
-public class Item
+public class Item(string name, decimal price) //primary constructor
 {
-    public int Id { get; set; }
+    public int Id { get; init; }
 
-    public string Name { get; set; }
+    public string Name { get; init; } = name; //primary constructor
 
-    public decimal Price { get; set; }
+    public decimal Price { get; init; } = price; //primary constructor
 
-    public Item(string name, decimal price)
-    {
-        Name = name;
-        Price = price;
-    }
 }

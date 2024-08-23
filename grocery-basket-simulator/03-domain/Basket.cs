@@ -1,12 +1,7 @@
-public class Basket
+public class Basket() //primary constructor
 {
-    // <name, quantity>
-    public Dictionary<string, int> Items;
-
-    public Basket()
-    {
-        Items = new Dictionary<string, int>();
-    }
+    // primary constructor
+    public Dictionary<string, int> Items {get; init;} = new Dictionary<string, int>();
 
     public void AddItem(string itemName)
     {
