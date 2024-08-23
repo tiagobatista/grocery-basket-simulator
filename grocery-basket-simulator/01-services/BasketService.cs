@@ -28,7 +28,7 @@ public class BasketService : IBasketService
         {
             var item = _itemRepository.GetItem(basketItem.Key) ?? throw new ItemDoesNotExistException($"Item {basketItem.Key} from basket does not exist in stock!");
 
-            total += item.Price;
+            total += item.Price * basketItem.Value;
         }
 
         return $"Total basket price is {total:#.##}€";
