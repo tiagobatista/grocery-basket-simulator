@@ -1,13 +1,8 @@
 
-public class Menu
+public class Menu(IBasketService basketService)
 {
 
-    public IBasketService _basketService;
-
-    public Menu(IBasketService basketService)
-    {
-        _basketService = basketService;
-    }
+    public IBasketService _basketService = basketService;
 
     public void DisplayMenu()
     {

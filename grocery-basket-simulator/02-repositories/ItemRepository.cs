@@ -1,11 +1,6 @@
-public class ItemRepository : IItemRepository
+public class ItemRepository(AppDbContext context) : IItemRepository
 {
-    private readonly AppDbContext _context;
-
-    public ItemRepository(AppDbContext context)
-    {
-        _context = context;
-    }
+    private readonly AppDbContext _context = context;
 
     public Item? GetItem(string itemName)
     {

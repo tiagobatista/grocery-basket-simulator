@@ -1,11 +1,6 @@
-public class BasketService : IBasketService
+public class BasketService(IItemRepository itemRepository) : IBasketService
 {
-    private IItemRepository _itemRepository;
-
-    public BasketService(IItemRepository itemRepository)
-    {
-        _itemRepository = itemRepository;
-    }
+    private IItemRepository _itemRepository = itemRepository;
 
     public void AddItemToBasket(string itemName, Basket basket)
     {
